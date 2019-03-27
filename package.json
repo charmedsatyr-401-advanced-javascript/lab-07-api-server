@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
     "lint": "eslint **/*.js",
     "test": "jest --verbose --coverage",
     "test-watch": "jest --watchAll --verbose --coverage"
@@ -21,6 +22,7 @@
     "supertest": "^3.3.0"
   },
   "devDependencies": {
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "swagger-ui-express": "^4.0.2"
   }
 }
