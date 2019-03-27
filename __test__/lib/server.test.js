@@ -5,7 +5,7 @@ const supertest = require('supertest');
 const mockRequest = supertest(server);
 
 describe('web server', () => {
-  xit('should respond with a 500 on an error', () => {
+  it('should respond with a 500 on an error', () => {
     return mockRequest
       .get('/foo')
       .then(results => {
