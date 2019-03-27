@@ -8,7 +8,7 @@
 ### Links and Resources
 * [PR](https://github.com/charmedsatyr-401-advanced-javascript/lab-07-api-server/pull/1)
 
-[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server.svg?branch=submission)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server)
+* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server.svg?branch=submission)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server)
 
 #### Documentation
 * [Swagger](./docs/swagger.json)
@@ -16,30 +16,32 @@
 ### Modules
 `index.js`
 
+`./lib/server.js`
+
 `./lib/db.js`
 
 `./lib/logger.js`
 
+`./lib/validate.js`
+
 `./lib/routes.js`
 
-`./lib/server.js`
-
-`./lib/validate.js`
 
 ##### Exported Values and Methods from `index.js`
 N/A
 
+##### Exported Values and Methods from `server.js`
+###### `app` -> an instance of the Express application
+###### `start(PORT)` -> a function to start the application
+
 ##### Exported Values and Methods from `db.js`
-`db`, a simple empty array database
+###### `db` -> a a simple empty array database
 
 ##### Exported Values and Methods from `logger.js`
-`logger`
+###### `logger(req, res, next)` -> logs `LOG: req.method, req.path`
 
 ##### Exported Values and Methods from `validate.js`
 ###### `validate(input)` -> a valid database object or `false`
-
-###### `logger(req, res, next)` -> logs `LOG: req.method, req.path`
-This middleware logs all request methods and paths.
 
 ##### Exported Values and Methods from `routes.js`
 ###### `getAllCategories(req, res, next)` -> retrieves all categories from database
@@ -53,7 +55,8 @@ This route modifies an object in the database and returns the new object if the 
 ###### `deleteCategory(req, res, next)` -> removes category from database
 
 #### Running the app
-* `node index.js`; the application will run by default at `http://localhost:8080/`.
+* `node index.js` or `nodemon index.js`
+The application will run by default at `http://localhost:8080/`.
 
 #### Tests
 * How do you run tests?
@@ -63,8 +66,6 @@ This route modifies an object in the database and returns the new object if the 
 `npm run test-watch`
 * What assertions were made?
 
-  * It should respond with a 500 on an error.
-
   * It should respond with a 404 on an invalid route.
 
   * It should respond with a 404 on an invalid method.
@@ -73,9 +74,7 @@ This route modifies an object in the database and returns the new object if the 
 
 * What assertions need to be / should be made?
 
-Testing for this application is incomplete. Each route handler requires separate testing to ensure it has the intended effects on the client view and on the database.
-
-The code was modularized without considering that an array `db` would not persist records through time without additional code to write to the `./lib/db.js` file. As a result, manual testing on the server fails, and full automated testing was not implemented. This circumstance also explains why the Swagger documentation is generally incorrect or incomplete.
+Testing for this application is incomplete. The data model, `validate` package, `logger`, and each route handler require unit testing. There should also be a test for the response to a server error.
 
 #### UML
 N/A
