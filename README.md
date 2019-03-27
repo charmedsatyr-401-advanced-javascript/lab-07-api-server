@@ -8,6 +8,8 @@
 ### Links and Resources
 * [PR](https://github.com/charmedsatyr-401-advanced-javascript/lab-07-api-server/pull/1)
 
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server.svg?branch=submission)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/lab-07-api-server)
+
 #### Documentation
 * [Swagger](./docs/swagger.json)
 
