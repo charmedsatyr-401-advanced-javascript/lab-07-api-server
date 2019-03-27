@@ -9,14 +9,19 @@
 * [PR](https://github.com/charmedsatyr-401-advanced-javascript/lab-07-api-server/pull/1)
 
 #### Documentation
-* [swagger](./docs/swagger.json)
+* [Swagger](./docs/swagger.json)
 
 ### Modules
 `index.js`
+
 `./lib/db.js`
+
 `./lib/logger.js`
+
 `./lib/routes.js`
+
 `./lib/server.js`
+
 `./lib/validate.js`
 
 ##### Exported Values and Methods from `index.js`
@@ -58,14 +63,17 @@ This route modifies an object in the database and returns the new object if the 
 `npm run test-watch`
 * What assertions were made?
 
-`It should respond with a 500 on an error.`
-`It should respond with a 404 on an invalid route.`
-`It should respond with a 404 on an invalid method.`
-`It should respond properly on request to /categories.`
+  * It should respond with a 500 on an error.
+
+  * It should respond with a 404 on an invalid route.
+
+  * It should respond with a 404 on an invalid method.
+
+  * It should respond properly on request to /categories.
 
 * What assertions need to be / should be made?
 
-Testing for this application is incomplete. Each route handler requires separate testing to ensure it has the intended effects on the client view and the database.
+Testing for this application is incomplete. Each route handler requires separate testing to ensure it has the intended effects on the client view and on the database.
 
 #### UML
 N/A
