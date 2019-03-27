@@ -60,8 +60,6 @@ This route modifies an object in the database and returns the new object if the 
 
 `npm run tests`
 
-`npm run lint`
-
 `npm run test-watch`
 * What assertions were made?
 
@@ -76,6 +74,8 @@ This route modifies an object in the database and returns the new object if the 
 * What assertions need to be / should be made?
 
 Testing for this application is incomplete. Each route handler requires separate testing to ensure it has the intended effects on the client view and on the database.
+
+The code was modularized without considering that an array `db` would not persist records through time without additional code to write to the `./lib/db.js` file. As a result, manual testing on the server fails, and full automated testing was not implemented. This circumstance also explains why the Swagger documentation is generally incorrect or incomplete.
 
 #### UML
 N/A
